@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -12,7 +11,6 @@
   <script src="/javascripts/front.js"></script>
 </head>
 <body ng-app="laag" ng-controller="goalCtrl">
-  <!-- Fixed navbar -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -31,22 +29,20 @@
           <li><a href="tracker.html">Track</a></li>
           <li class="active"><a href="#">Analyse</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
   </nav>
   <div class="container">
     <div class="form-horizontal tracker-form">
       <div class="row tracker-heading">
         <div class="col-md-6 col-md-offset-3">
-          <h2 align="center">My goals</h2>
+          <h2>My goals</h2>
         </div>
       </div>
-      <div class="ol-xs-10 col-md-offset-1">
-
       <div ng-repeat="goal in goals" class="form-group row form-row">
-        <div class="col-xs-11,5 col-md-offset-1 goal">{{goal.description}} <div class="pull-right"> {{goal.ok}} ok - {{goal.ko}} - ko{{goal.ok}}/{{goal.ko+goal.ok}} </div></div></div></div>
+        <div class="col-xs-11,5 goal col-md-offset-1 goal">{{goal.description}}<div class="pull-right"><label class="btn btn-success">{{goal.ok}} ok</label><label class="btn btn-danger">  {{goal.ko}} ko </label> </div>
+        </div></div>
       </div>
-      </form>
     </div>
 
     <hr>
