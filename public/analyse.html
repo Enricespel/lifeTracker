@@ -40,11 +40,13 @@
         </div>
       </div>
       <div ng-repeat="goal in goals" class="form-group row form-row">
-        <div class="col-xs-11,5 goal col-md-offset-1 goal">{{goal.description}}<div class="pull-right"><label class="btn btn-success">{{goal.ok}} ok</label><label class="btn btn-danger">  {{goal.ko}} ko </label> </div>
+        <div ng-class="{"kogoal":1==1}"
+        <div class="col-xs-11,5 goal col-md-offset-1 goal">{{goal.description}}
+        </div>
+          <div class="pull-right"><label class="btn btn-success">{{goal.ok}} ok</label><label class="btn btn-danger">  {{goal.ko}} ko </label> </div>
         </div></div>
       </div>
     </div>
-
     <hr>
     <footer>
       <p>&copy; 2017 SEK Catalunya</p>
